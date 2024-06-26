@@ -3,17 +3,17 @@ from typing import List
 
 def get_requirements(file_path:str)->List[str]:
     Hypen_e_dot="-e ."
-    requiremnets =[]
+    requirements =[]
     with open(file_path) as file_obj:
-        requiremnets=file_obj.readlines()
-        requiremnets = [ req.replace( '/n',"") for req in requiremnets]
-        if Hypen_e_dot in requiremnets:
-            requiremnets.remove(Hypen_e_dot)
+        requirements=file_obj.readlines()
+        requirements = [ req.replace( '/n',"") for req in requirements]
+        if Hypen_e_dot in requirements:
+            requirements.remove(Hypen_e_dot)
     
-    return requiremnets
+    return requirements
 
 
-    
+
 setup(
     name="Ml Projects",
     version='0.0.1',
